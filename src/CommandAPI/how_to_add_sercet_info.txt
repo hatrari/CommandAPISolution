@@ -1,0 +1,2 @@
+dotnet user-secrets set "UserID" "postgres"
+dotnet user-secrets set "Password" "mysecretpassword"
