@@ -65,7 +65,6 @@ namespace CommandAPI.Controllers
         return ValidationProblem(ModelState);
       }
       _mapper.Map(commandToPatch, commandModelFromRepo);
-      _commandRepo.Update(commandModelFromRepo);
       _commandRepo.SaveChanges();
       return RedirectToAction(nameof(GetCommandById), commandModelFromRepo);
     }
