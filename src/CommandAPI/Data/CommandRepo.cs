@@ -25,7 +25,11 @@ namespace CommandAPI.Data
 
     public void Delete(Command cmd)
     {
-      throw new System.NotImplementedException();
+      if (cmd == null)
+      {
+        throw new ArgumentNullException(nameof(cmd));
+      }
+      _context.Commands.Remove(cmd);
     }
 
     public IEnumerable<Command> GetAll()
