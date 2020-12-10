@@ -12,6 +12,7 @@ namespace CommandAPI.Controllers
   [ApiController]
   public class CommandsController : ControllerBase
   {
+    // comment to test auto build pipeline
     private readonly ICommandRepo _commandRepo;
     private readonly IMapper _mapper;
 
