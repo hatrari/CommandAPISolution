@@ -23,7 +23,6 @@ namespace CommandAPI.Controllers
       _mapper = mapper;
     }
     
-    [Authorize]
     [HttpGet]
     public ActionResult<IEnumerable<CommandReadDto>> GetAllCommands()
     {
@@ -31,6 +30,7 @@ namespace CommandAPI.Controllers
       return Ok(_mapper.Map<IEnumerable<CommandReadDto>>(commands));
     }
 
+    [Authorize]
     [HttpGet("{id}", Name="GetCommandById")]
     public ActionResult<CommandReadDto> GetCommandById(int id)
     {
